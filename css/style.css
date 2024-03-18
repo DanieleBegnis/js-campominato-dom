@@ -50,6 +50,10 @@ header {
     background-color: aquamarine;
 }
 
+.red {
+    background-color: red;
+}
+
 footer > div {
  font-size: 30px;
  color: aliceblue;
