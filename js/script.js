@@ -51,6 +51,8 @@ function generateSquare(number) {
     //alert(number);
     if(bombsArray.includes(number)) {
         this.classList.add('red');
+        alert('hai perso :(');
+        document.getElementById('grid').style.display = 'none'
     } else {
         this.classList.add('blue');
     }});

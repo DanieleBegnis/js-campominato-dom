@@ -35,6 +35,10 @@ header {
     align-content: flex-start;
 }
 
+.d-none {
+    display: none;
+}
+
 .square {
     width: calc(100% / 10);
     height: calc(100% / 10);
