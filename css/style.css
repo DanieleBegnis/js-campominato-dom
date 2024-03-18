@@ -1,0 +1,57 @@
+/*-------------------
+    RESET
+-------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkblue;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn {
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 16px;
+}
+
+#grid {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    background-color: coral;
+    border: 2px solid black;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue {
+    background-color: aquamarine;
+}
+
+footer > div {
+ font-size: 30px;
+ color: aliceblue;
+padding-left: 20px;
+}
