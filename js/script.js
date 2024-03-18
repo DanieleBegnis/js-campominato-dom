@@ -13,6 +13,9 @@
 const mainGrid = document.querySelector('#grid');
 //creo array vuoto di numeri 'bomba'
 const randomNumbersArray = [];
+//creo contatore punteggio
+let count = 0;
+console.log(count)
 //seleziono il pulsante
 const mainButton = document.querySelector('#btn');
 mainButton.addEventListener('click', function() {
@@ -47,20 +50,24 @@ function generateSquare(number) {
 
     //evento del colore sui quadrati
     newSquare.addEventListener('click', function() {
-    //this.classList.add('blue');
-    //alert(number);
     if(bombsArray.includes(number)) {
         this.classList.add('red');
         alert('hai perso :(');
         document.getElementById('grid').style.display = 'none'
     } else {
         this.classList.add('blue');
+        count++;
+        return count
+        
     }});
-
     return newSquare;
 };
 
 });
+
+//creo il punteggio e ci metto il numero di caselle giuste cliccate
+const points = document.querySelector('#points');
+points.innerHTML += (count);
 
 
 
