@@ -15,14 +15,12 @@ const mainGrid = document.querySelector('#grid');
 const randomNumbersArray = [];
 //seleziono il pulsante
 const mainButton = document.querySelector('#btn');
-console.log(mainButton)
 mainButton.addEventListener('click', function() {
     //coloro il bottone e lo spengo
     this.classList.toggle('blue');
     document.getElementById("btn").disabled = true;
     //funzione che crea un array di numeri random
     function generateRandomArray(arrayLength, numMin, numMax) {
-        // Creiamo un array vuoto
         while(randomNumbersArray.length < arrayLength) {
             // genero un numero random e controllo che non sia già stato inserito
             const randNumber = getRndInteger(numMin, numMax);
@@ -51,12 +49,11 @@ function generateSquare(number) {
     newSquare.addEventListener('click', function() {
     //this.classList.add('blue');
     //alert(number);
-    if (this === bombsArray) {
-        this.classList.add ('red')
+    if(bombsArray.includes(number)) {
+        this.classList.add('red');
     } else {
-        this.classList.add ('blue')
-    }
-    });
+        this.classList.add('blue');
+    }});
 
     return newSquare;
 };
